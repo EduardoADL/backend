@@ -1,6 +1,8 @@
 package com.example.demo.Produto;
 
+import com.example.demo.Fornecedor.Fornecedor;
 import com.example.demo.Fornecedor.FornecedorDTO;
+import com.example.demo.TipoProduto.TipoProduto;
 import com.example.demo.TipoProduto.TipoProdutoDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,9 +22,9 @@ public class ProdutoDTO {
     private Double precovenda;
     private Double precocompra;
 
-    private TipoProdutoDTO tipoProduto;
+    private TipoProduto tipoProduto;
 
-    private FornecedorDTO fornecedor;
+    private Fornecedor fornecedor;
 
     public static  ProdutoDTO from(Produto produto){
         ModelMapper modelMapper = new ModelMapper();

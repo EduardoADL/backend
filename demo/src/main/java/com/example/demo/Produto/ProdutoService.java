@@ -43,6 +43,7 @@ public class ProdutoService {
         Produto produto1 = produtoRepository.findById(id).orElseThrow(() -> {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         });
+
         modelMapper.modelMapper().map(produto, produto1);
         return ProdutoDTO.from(produtoRepository.save(produto1));
     }
